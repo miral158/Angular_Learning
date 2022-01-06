@@ -1,1 +1,39 @@
-<p>login works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <div [ngClass]="['backround', 'textColor']">
+        <h2 >ng Class for Login</h2>
+    </div>
+
+    <div *ngIf="stable; then angular12; else angular13">
+    </div>
+    <ng-template #angular12>
+        <p>Angular 12 is stable version</p>
+    </ng-template>
+
+    <ng-template #angular13>
+        <p>Angular 13 is stable version</p>
+    </ng-template>
+
+    <div *ngFor="let v of version, first as f">
+        <li>version: {{v}}</li>
+    </div>
+    <div ngSwitch="13">
+        <div *ngSwitchCase="13">
+            <p> This is not a stable version</p>
+        </div>
+        <div *ngSwitchDefault>
+        <p>Stable version</p>
+        </div>
+    </div>
+
+
+
+</body>
+</html>
