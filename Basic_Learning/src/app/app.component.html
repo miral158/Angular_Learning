@@ -1,5 +1,3 @@
-<app-pratice></app-pratice>
-
 <!-- 
 <app-login></app-login>
 <h1 [ngClass]="'one'">Angular Learning</h1>
@@ -7,14 +5,22 @@
 <h1 [ngClass]="{'one': 'true','two':'false','three':'true'}">This is 3rd Example </h1>
 -->
 
-<!--
-<h3 *ngFor= "let user of UserDetails| keyvalue; first as i"> 
-    Detail is: {{i}} {{user.value}}
-</h3>
+<table border="1">
+  <tr align="center">
+    <td>Name</td>
+    <td>Email</td>
+    <td>Phone</td>
+  </tr>
+  <tr *ngFor="let user of UserDetails">
+    <td>{{ user.name }}</td>
+    <td>{{ user.email }}</td>
+    <td>{{ user.phone }}</td>
+  </tr>
+</table>
 
-<h2 *ngFor="let item of users ; index as i">
-    user: {{i}} {{item}}
-</h2>
+<!--
+<h3 *ngFor="let user of UserDetails">Detail is: {{ user.name }}</h3>
+<h2 *ngFor="let item of users; index as i">user: {{ i }} {{ item }}</h2>
 
 -->
 

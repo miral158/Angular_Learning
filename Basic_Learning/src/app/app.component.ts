@@ -7,11 +7,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Basic_Learning';
-  UserDetails = {
+  UserDetails = 
+  [{
     'name':'Miral',
     'email': 'miraldonda@gmail.com',
     'phone': '8460517779' 
-  };
+  },
+  {
+    'name':'Khushi',
+    'email': 'khushipatel@gmail.com',
+    'phone': '8758946851' 
+  },
+
+];
   users = ['miral','ankit','ravi'];
 
   display = true;
