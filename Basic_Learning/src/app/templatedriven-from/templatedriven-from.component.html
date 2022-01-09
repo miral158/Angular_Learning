@@ -1,0 +1,29 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Template Driven Forms</title>
+    </head>
+    <body>
+        <div>
+            <!-- <form #loginForm = "ngForm" (ngSubmit)="UserLogin(loginForm.value)" >
+                Enter your Email: <input type="text" #name= "ngModel"name="email" email ngModel required/> <br>
+                <span *ngIf="name.invalid && name.touched" style="color: red;">Please Enter Valid Input</span> <br><br>
+
+                Password:<input type="password" minlength="8" #psw = "ngModel"name="txt_psw" required ngModel/><br><br>
+                <span *ngIf="psw.invalid && psw.touched" style="color: red;">Please Enter Valid Input</span> <br><br>
+
+                <button [disabled]="loginForm.invalid">Submit</button>
+            </form>
+                <br><br> -->
+            <form #testForm = "ngForm" (ngSubmit)="display(testForm.value)" >
+                Name: <input type="text" name="txt_name" #name = "ngModel" ngModel required><br>
+                <span *ngIf="name.invalid && name.touched"> Please enter valid input</span>
+                <button>Submit</button>
+            </form>
+        
+        </div>
+    </body>
+    </html>

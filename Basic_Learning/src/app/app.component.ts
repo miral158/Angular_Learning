@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Basic_Learning';
-  UserDetails = 
+  /*UserDetails = 
   [{
     'name':'Miral',
     'email': 'miraldonda@gmail.com',
@@ -24,5 +24,6 @@ export class AppComponent {
 
   display = true;
   color ='blue';
+  */
 
 }

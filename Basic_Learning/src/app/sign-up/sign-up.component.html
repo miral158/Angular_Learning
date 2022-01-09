@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=], initial-scale=1.0" />
+    <title>Sign Up</title>
+  </head>
+  <body>
+    <form [formGroup]="signupForm" (ngSubmit)="userSignUp()">
+      <h3>Sign Up</h3>
+
+      <div class="my-1">Name: <input type="text" formControlName="name"/></div>
+      <span style = "color: red;" *ngIf="user && user.touched && user.invalid">This field is not valid</span>
+      <div class="my-1">Email: <input type="text" formControlName="email"/></div>
+      <span style = "color: red;" *ngIf="email && email.touched && email.invalid">This field is not email</span>
+      <div class="my-1">Phone: <input type="text" formControlName="phone"/></div>
+      <div class="my-1">Age: <input type="text" formControlName="age"/></div>
+      <div>
+        Gender:
+        <input type="radio" value="male" checked formControlName="gender"/> Male
+        <input type="radio" value="female" formControlName="gender"/> Female
+      </div>
+      <div>
+        <button [disabled]="signupForm.invalid" type="submit" class="btn btn-primary my-1"> submit</button>
+      </div>
+    </form>
+  </body>
+</html>
