@@ -19,7 +19,7 @@ export class ReactiveFormComponent implements OnInit {
   UserLogin()
   {
 
-    console.warn(this.loginForm.value);
+    console.log(this.loginForm.value);
   }
 
 }

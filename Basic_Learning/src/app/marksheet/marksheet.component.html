@@ -21,7 +21,8 @@
                     <option value="2">Two</option>
                     <option value="3">Three</option>
                 </select>
-                <span style="color: red;" *ngIf="standard && standard.invalid && standard.touched"> This field is required</span>
+                <span style="color: red;" *ngIf="standard && standard.invalid && standard.touched"> This field is
+                    required</span>
             </div>
             <hr />
             <div class="container-fluid">
@@ -32,21 +33,36 @@
                             {{ i }}
                         </option>
                     </select>
-                    <span style="color: red;" *ngIf="rollno && rollno.invalid && rollno.touched"> This field is required</span>
+                    <span style="color: red;" *ngIf="rollno && rollno.invalid && rollno.touched"> This field is
+                        required</span>
                 </div>
                 <hr />
-                <b>Add Marks</b>
-                <div class="row">
-                    <div class="col">
-                        <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Maths</label>
-                        <input type="text" class="form-control" placeholder="Mark" aria-label="Mark"
-                            formControlName="marks" />
-                            <span style="color: red;" *ngIf="marks && marks.invalid && marks.touched"> This field is required</span>
+
+                <b>Add Subject</b>
+
+                <div class="form-group" formArrayName="addsubject">
+
+                    <div>
+                        <ng-container *ngFor="let sub of AddSubject.controls; index as i">
+                            <input class="form-control mt-2 mb-2" type="text" placeholder="subject name"
+                                [formControlName]="i">
+
+                            <button type="button" class="btn btn-warning" (click)="RemoveInput(i)"
+                                *ngIf="AddSubject.length>1">remove</button>
+                        </ng-container>
+
+                        <br>
+                        <button class="btn btn-primary" type="button" (click)="addSubject()"> Add Subject</button>
+
                     </div>
+                    <span style=" color: red;" *ngIf="subject && subject.invalid && subject.touched">
+                        Subject Name is required
+                    </span>
                 </div>
+
                 <hr />
                 <div>
-                    <button [disabled]="marksheet.invalid" class="btn btn-success" type="submit">
+                    <button class="btn btn-success" type="submit">
                         submit
                     </button>
                 </div>
@@ -57,4 +73,5 @@
         </p>
     </form>
 </body>
+
 </html>
