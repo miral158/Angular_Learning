@@ -12,6 +12,7 @@
 
       <div class="my-1">Name: <input type="text" formControlName="name"/></div>
       <span style = "color: red;" *ngIf="user && user.touched && user.invalid">This field is not valid</span>
+      
       <div class="my-1">Email: <input type="text" formControlName="email"/></div>
       <span style = "color: red;" *ngIf="email && email.touched && email.invalid">This field is not email</span>
       <div class="my-1">Phone: <input type="text" formControlName="phone"/></div>
