@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Marks Entry</title>
 </head>
-
 <body style="background-color: rgb(236, 248, 236)">
     <form [formGroup]="marksheet" (ngSubmit)="displayMarks()">
         <div style="margin-right: 200px; margin-left: 200px">
@@ -37,11 +36,9 @@
                         required</span>
                 </div>
                 <hr />
-
                 <b>Add Subject</b>
 
                 <div class="form-group" formArrayName="addsubject">
-
                     <div>
                         <ng-container *ngFor="let sub of AddSubject.controls; index as i">
                             <input class="form-control mt-2 mb-2" type="text" placeholder="subject name"
@@ -49,17 +46,15 @@
 
                             <button type="button" class="btn btn-warning" (click)="RemoveInput(i)"
                                 *ngIf="AddSubject.length>1">remove</button>
-                        </ng-container>
-
+                        
+                        <span style=" color: red;" *ngIf="AddSubject.controls[i] && AddSubject.controls[i].touched && AddSubject.controls[i].invalid">
+                            Subject Name is required
+                        </span>
+                    </ng-container>
                         <br>
-                        <button class="btn btn-primary" type="button" (click)="addSubject()"> Add Subject</button>
-
+                        <button class="btn btn-primary mt-3" type="button" (click)="addSubject()"> Add Subject</button>
                     </div>
-                    <span style=" color: red;" *ngIf="subject && subject.invalid && subject.touched">
-                        Subject Name is required
-                    </span>
                 </div>
-
                 <hr />
                 <div>
                     <button class="btn btn-success" type="submit">

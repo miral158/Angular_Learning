@@ -14,14 +14,14 @@ export class SignUpComponent implements OnInit {
   }
 
   signupForm = new FormGroup({
-    name: new FormControl('', Validators.required),
+    name: new FormControl('', [Validators.required, Validators.pattern('[a-zA-Z]{2,}')]),
     email: new FormControl('', [Validators.required, Validators.email]),
     phone:new FormControl('', Validators.required),
     age:new FormControl('', Validators.required),
     gender: new FormControl('', Validators.required)
   })
   userSignUp(){
-  console.log(this.signupForm.value);
+  console.log(this.signupForm);
     
   }
   get user()

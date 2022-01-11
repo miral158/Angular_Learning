@@ -9,8 +9,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { MarksheetComponent } from './marksheet/marksheet.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { AddMarksComponent } from './add-marks/add-marks.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +17,7 @@ import { AddMarksComponent } from './add-marks/add-marks.component';
     ReactiveFormComponent,
     SignUpComponent,
     MarksheetComponent,
-    AddMarksComponent,
+    
    
   ],
   imports: [
