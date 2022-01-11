@@ -1,10 +1,16 @@
-<app-sign-up></app-sign-up> 
+<!-- <app-sign-up></app-sign-up>  -->
+<!-- <app-marksheet> {{data}}
+</app-marksheet> -->
+<app-content-projection>
+     {{data}}
+    <h1>This content is from content projection</h1>
+    <h3 demo > This is multi slot projection</h3>
+    <ng-template #admin>
+        This is for admin 
+    </ng-template>
+</app-content-projection> 
 
-<!-- <app-marksheet></app-marksheet> -->
 <!-- <app-reactive-form></app-reactive-form>
-
-
-
 <app-templatedriven-from></app-templatedriven-from>
 <app-login></app-login>
 <h1 [ngClass]="'one'">Angular Learning</h1>

@@ -1,57 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=], initial-scale=1.0" />
   <title>Sign Up</title>
 </head>
-
 <body>
   <form [formGroup]="signupForm" (ngSubmit)="userSignUp()">
     <div style="text-align: center">
       <h1>Sign In</h1>
     </div>
     <div class="form-group" style="margin-right: 200px; margin-left: 200px">
-    <div class="my-1 form-control">Name: <input type="text" formControlName="name" /></div>
+      <div class="my-1 form-control">Name: <input type="text" formControlName="name" /></div>
       <div *ngIf="user && user.invalid && (user.dirty || user.touched)" class="alert alert-danger">
-        <div *ngIf="user.errors?.['required']; then Required; else Invalid" >  </div>
-          
+        <div *ngIf="user.errors?.['required']; then Required; else Invalid"> </div>
         <ng-template #Invalid>
-          Please Enter Valid Name 
+          Please Enter Valid Name
         </ng-template>
         <ng-template #Required>
           Name is Required
         </ng-template>
       </div>
-
-    <div class="my-1 form-control">Email: <input type="text" formControlName="email" /></div>
+    </div>
+    <div class="form-group" style="margin-right: 200px; margin-left: 200px">
+      <div class="my-1 form-control">Email: <input type="text" formControlName="email" /></div>
       <div *ngIf="email && email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
-        <div *ngIf="email.errors?.['required']; then Required; else Invalid" >  </div>
-
+        <div *ngIf="email.errors?.['required']; then Required; else Invalid"> </div>
         <ng-template #Invalid>
-          Please Enter Valid Email 
+          Please Enter Valid Email
         </ng-template>
         <ng-template #Required>
           Email is Required
         </ng-template>
       </div>
-      
-      
+    </div>
+    <div class="form-group" style="margin-right: 200px; margin-left: 200px">
       <div class="my-1 form-control">Phone: <input type="text" formControlName="phone" /></div>
+      <div *ngIf="phone && phone.invalid && (phone.dirty || phone.touched)" class="alert alert-danger">
+        <div *ngIf="phone.errors?.['required']; then Required; else Invalid"> </div>
+        <ng-template #Invalid>
+          Please Enter 10 digit phone number
+        </ng-template>
+        <ng-template #Required>
+          Phone number is Required
+        </ng-template>
+      </div>
+      </div>
+      <div class="form-group" style="margin-right: 200px; margin-left: 200px">
       <div class="my-1 form-control">Age: <input type="text" formControlName="age" /></div>
-      <div class="form-control">
+      <div *ngIf="age && age.invalid && (age.dirty || age.touched)" class="alert alert-danger">
+        <div *ngIf="age.errors?.['required']; then Required; else Invalid"> </div>
+        <ng-template #Invalid>
+          age can not greater than 4 digit
+        </ng-template>
+        <ng-template #Required>
+          Age is Required
+        </ng-template>
+      </div>
+      </div>
+      <div class="form-group" style="margin-right: 200px; margin-left: 200px">
         Gender:
         <input type="radio" value="male" checked formControlName="gender" /> Male
         <input type="radio" value="female" formControlName="gender" /> Female
       </div>
-      <div class="form-control">
-        <button type="submit" class="btn btn-primary my-1"> submit</button>
+      <div class="form-group" style="margin-right: 200px; margin-left: 200px">
+        <button [disabled]="signupForm.invalid" type="submit" class="btn btn-primary my-1"> submit</button>
       </div>
-    </div>
-
-  </form>
-</body>
-
+    </form> 
+  </body>
 </html>

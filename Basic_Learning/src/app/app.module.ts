@@ -9,6 +9,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { MarksheetComponent } from './marksheet/marksheet.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ContentProjectionComponent } from './content-projection/content-projection.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,6 +18,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ReactiveFormComponent,
     SignUpComponent,
     MarksheetComponent,
+    ContentProjectionComponent,
     
    
   ],

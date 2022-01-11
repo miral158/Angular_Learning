@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  data =[10,23];
   title = 'Basic_Learning';
   /*UserDetails = 
   [{

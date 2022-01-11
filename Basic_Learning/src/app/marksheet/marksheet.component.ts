@@ -1,17 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
 @Component({
   selector: 'app-marksheet',
   templateUrl: './marksheet.component.html',
-  styleUrls: ['./marksheet.component.css']
+  styleUrls: ['./marksheet.component.css'],
+  template: `<ngcontent></ngcontent>`
 })
 export class MarksheetComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  @Input() masterArray: number[] = [];
+  constructor() { 
+    
   }
-
+  
+  ngOnInit(): void {
+    
+  }
+  
   RNO = [1, 2, 3, 4, 5];
   marksheet = new FormGroup({
     standard: new FormControl('', [Validators.required]),
