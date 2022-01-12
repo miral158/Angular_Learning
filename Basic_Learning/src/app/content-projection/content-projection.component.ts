@@ -13,11 +13,10 @@ export class ContentProjectionComponent implements OnInit {
   constructor() { }
   ngOnInit(): void {
   }
-  person = {
-    name : 'miral',
-    email: 'MiralDonda@gmail.com',
-    dob: Date(),
-    money: 100
-  }
+  person =
+    {
+      name: "node 1",
+      date: "Jan 11, 2022, 3:42:17 PM"
+    }
 
 }

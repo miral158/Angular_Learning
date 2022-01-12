@@ -10,6 +10,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { MarksheetComponent } from './marksheet/marksheet.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ContentProjectionComponent } from './content-projection/content-projection.component';
+import { DateAgoPipe } from './pipes/date-ago.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +20,7 @@ import { ContentProjectionComponent } from './content-projection/content-project
     SignUpComponent,
     MarksheetComponent,
     ContentProjectionComponent,
+    DateAgoPipe,
     
    
   ],

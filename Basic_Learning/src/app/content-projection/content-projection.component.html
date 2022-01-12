@@ -1,8 +1,8 @@
-<h1>content Projection</h1>
-<hr>
+<!-- <h1>content Projection</h1>
+<hr> -->
 <!-- <div>{{userData}}</div> -->
 
-<ng-content></ng-content>
+<!-- <ng-content></ng-content>
 
 <ng-content select = "[demo]"></ng-content>
 
@@ -15,9 +15,13 @@
 <h1>
     Buit- In - Pipes
 </h1>
+<hr> -->
+<!-- <h3> uppercase: {{person.name | uppercase}}</h3> -->
+<!-- <h3>lowercase: {{person.email | lowercase}}</h3> -->
+<!-- <h3>{{person.dob | dateAgo}}</h3> -->
+<!-- <h3>{{person | json}}</h3> -->
+<!-- <h3>{{person.money |  currency:'INR':'symbol' }}</h3>    -->
+
+<h1>Custom Pipe Example</h1> 
 <hr>
-<h3> uppercase: {{person.name | uppercase}}</h3>
-<h3>lowercase: {{person.email | lowercase}}</h3>
-<h3>{{person.dob | date :'medium'}}</h3>
-<h3>{{person | json}}</h3>
-<h3>{{person.money |  currency:'INR':'symbol' }}</h3>
+<h5 class="mx-3">{{person.date | dateAgo}}</h5>
