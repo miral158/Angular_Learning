@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Router Example</title>
+</head>
+<body>
+    <h1 class="h1 mb-4">Router and Nevigation</h1>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <a class="navbar-brand" routerLink="/">Router Demo</a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" routerLink="/home" routerLinkActive="active">Home</a>
+              </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/services"routerLinkActive="active">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/aboutus"routerLinkActive="active">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/contactus" routerLinkActive="active">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <router-outlet></router-outlet>
+</body>
+</html>

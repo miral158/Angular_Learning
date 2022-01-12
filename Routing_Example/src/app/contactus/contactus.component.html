@@ -1,0 +1,18 @@
+<h1 style="text-align: center;" class="mb-3">Contact Details</h1>
+<p>Static data passed on service</p>
+    <table class="table table-striped table-hover">
+        <thead>
+          <tr >
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Contact Number</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let contact of contactList">
+          <tr>
+            <th scope="row">{{contact.contactId}}</th>
+            <td>{{contact.contactName}}</td>
+            <td>{{contact.number}}</td>
+          </tr>
+        </tbody>
+      </table>
