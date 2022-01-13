@@ -11,7 +11,7 @@ export class AboutusComponent implements OnInit {
   u_data: any = []; 
   ngOnInit(): void {
     console.log(this.contactService.getData())
-    this.u_data = this.contactService.getData().default.users;
+    this.u_data = this.contactService.getData().default;
     console.log(this.u_data.users);
   }
 

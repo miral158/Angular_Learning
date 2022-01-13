@@ -1,11 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import  *  as  data  from  '../assets/user.json';
+import { Iuser } from './user';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ContactsService {
+  private url: string = "../assets/user.json"
 
   constructor(private httpClient : HttpClient) { }
   getContacts(){
@@ -36,4 +39,10 @@ export class ContactsService {
   {
     return data;
   }
+
+  getConfig(): Observable<Iuser[]>
+  {
+    return this.httpClient.get<Iuser[]>(this.url);
+  }
+  
 }

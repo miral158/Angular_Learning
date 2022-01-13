@@ -1,5 +1,4 @@
-{
-    "users": [
+ [
       {
         "id": 0,
         "name": "Adam Carter",
@@ -20,5 +19,4 @@
         "city": "Toronto",
         "optedin": false
       }
-    ]
-}
+]
