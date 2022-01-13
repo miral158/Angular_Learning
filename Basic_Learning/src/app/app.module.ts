@@ -11,6 +11,8 @@ import { MarksheetComponent } from './marksheet/marksheet.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ContentProjectionComponent } from './content-projection/content-projection.component';
 import { DateAgoPipe } from './pipes/date-ago.pipe';
+import { AgePipe } from './pipes/age.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +23,7 @@ import { DateAgoPipe } from './pipes/date-ago.pipe';
     MarksheetComponent,
     ContentProjectionComponent,
     DateAgoPipe,
+    AgePipe,
     
    
   ],

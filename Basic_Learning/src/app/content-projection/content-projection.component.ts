@@ -16,7 +16,7 @@ export class ContentProjectionComponent implements OnInit {
   person =
     {
       name: "node 1",
-      date: "Jan 11, 2022, 3:42:17 PM"
+      date: "Jan 11, 2021, 3:42:17 PM"
     }
-
+  
 }

@@ -24,4 +24,11 @@
 
 <h1>Custom Pipe Example</h1> 
 <hr>
-<h5 class="mx-3">{{person.date | dateAgo}}</h5>
+<h5 class="mx-3">Age of {{person.name}} is {{person.date | age}} year</h5>
+<!-- <h1 *ngIf="person.length >1 ; else elseblock">
+{{person | json}}
+</h1>
+
+<ng-template #elseblock>
+    elseblock
+</ng-template> -->
