@@ -1,0 +1,42 @@
+.development {
+  background: #f7f9fd;
+  background-image: url(./development-bg.png);
+  padding: 100px 0;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0px 15px;
+  margin: 0px auto;
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.p {
+  color: #666;
+  max-width: 500px;
+  margin: 20px auto;
+  font-weight: 300;
+}
+
+.img {
+  width: 127px;
+  margin: 0 auto;
+}
+
+.sub {
+  width: 100%;
+}
+
+.main {
+  margin-top: 20px;
+}
+/*# sourceMappingURL=home.component.css.map */

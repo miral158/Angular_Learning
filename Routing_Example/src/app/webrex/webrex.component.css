@@ -1,0 +1,16 @@
+.development {
+  background: #f7f9fd;
+  background-image: url(../home/development-bg.png);
+  padding: 100px 0;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0px 15px;
+  margin: 0px auto;
+  text-align: center;
+}
+/*# sourceMappingURL=webrex.component.css.map */

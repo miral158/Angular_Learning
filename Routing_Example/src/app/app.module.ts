@@ -9,13 +9,19 @@ import { HomeComponent } from './home/home.component';
 import { ServicesComponent } from './services/services.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
+import { WebrexComponent } from './webrex/webrex.component';
+import { TabdetailComponent } from './tabdetail/tabdetail.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     ContactusComponent,
     AboutusComponent,
     ServicesComponent,
-    HomeComponent
+    HomeComponent,
+    WebrexComponent,
+    TabdetailComponent,
+    
     
   ],
   imports: [
