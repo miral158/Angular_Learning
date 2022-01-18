@@ -11,6 +11,7 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { WebrexComponent } from './webrex/webrex.component';
 import { TabdetailComponent } from './tabdetail/tabdetail.component';
+import { PortfoliocardsComponent } from './portfoliocards/portfoliocards.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { TabdetailComponent } from './tabdetail/tabdetail.component';
     HomeComponent,
     WebrexComponent,
     TabdetailComponent,
+    PortfoliocardsComponent,
     
     
   ],
