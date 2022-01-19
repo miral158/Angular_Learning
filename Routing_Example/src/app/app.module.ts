@@ -12,6 +12,7 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { WebrexComponent } from './webrex/webrex.component';
 import { TabdetailComponent } from './tabdetail/tabdetail.component';
 import { PortfoliocardsComponent } from './portfoliocards/portfoliocards.component';
+import { JobsFairComponent } from './jobs-fair/jobs-fair.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { PortfoliocardsComponent } from './portfoliocards/portfoliocards.compone
     WebrexComponent,
     TabdetailComponent,
     PortfoliocardsComponent,
+    JobsFairComponent,
     
     
   ],

@@ -1,0 +1,161 @@
+body {
+    font-family: "Roboto", sans-serif;
+}
+* {
+    box-sizing: border-box;
+}
+.theme-2 {
+    .discription {
+        h2 {
+            font-size: 82px;
+            font-weight: bold;
+            color: rgba(255, 255, 255, 0.4);
+            text-align: left;
+        }
+        .details {
+            font-size: 22px;
+        }
+    }
+
+    .details {
+        font-size: 20px;
+        font-weight: 100;
+        text-align: left;
+        line-height: 1.8
+    }
+    .hero {
+        background-color: #0b1075;
+        overflow: visible;
+        background-image: url(https://www.webrexstudio.com/wp-content/themes/twentyseventeen-child/images/hero-bg.png);
+        padding: 60px;
+        color: white;
+        background-repeat: no-repeat;
+        margin-bottom: 250px;
+        .image {
+            margin: 100px auto -250px;
+            max-width: 1000px;
+            width: 100%;
+            img {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+                max-width: initial;
+            }
+        }
+        .title {
+            font-size: 37px;
+            font-weight: 600;
+            text-align: center;
+            margin: 60px 0px px 30px 0px;
+        }
+    }
+    h3 {
+        color: #0b1075;
+        font-size: 28px;
+        font-weight: 600;
+        text-align: left;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+    .container {
+        max-width: 1200px;
+        width: 100%;
+        padding: 0px 15px;
+        margin: 0px auto;
+        text-align: center;
+    }
+    // .lead-image {
+    //     display: none;
+    // }
+    .project-detail {
+        padding-top: 95px;
+        .info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .block {
+                border-radius: 3px;
+                border: solid 1px #979797;
+                width: calc(50% - 15px);
+                margin-bottom: 30px;
+                padding: 20px 40px;
+                display: flex;
+                flex-direction: column;
+                span {
+                    font-size: 28px;
+                    font-weight: 400;
+                    text-align: left;
+                }
+                p {
+                    color: #fff;
+                }
+            }
+        }
+        h3 {
+            color: #ffffff;
+        }
+    }
+    .key-feature {
+        .feature {
+            display: flex;
+            flex-wrap: wrap;
+            .block-sellerlift {
+                width: 33%;
+                padding: 15px;
+                display: flex;
+                .left {
+                    margin: 10px;
+                    .icon {
+                        width: 40px;
+                        height: 40px;
+                        svg {
+                            width: 40px;
+                            height: 40px;
+                        }
+                    }
+                }
+                .right {
+                    font-family: "SofiaPro";
+                    font-weight: 100;
+                    font-size: 20px;
+                    color: #666;
+                    line-height: 1.8;
+                    text-align: left;
+                    h5 {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+.bottom {
+    margin-bottom: 100px;
+}
+
+.before-decoration {
+    position: relative;
+    span {
+        position: relative;
+        z-index: 1;
+    }
+    .icon {
+        position: absolute;
+        top: -10px;
+        left: -18px;
+        z-index: 0;
+    }
+}
+.gray {
+    background-color: #f7f9fd;
+    background-image: none;
+    padding: 30px 15px;
+}
+.project-detail {
+    padding: 80px 0;
+}
+.dark {
+    background-color: #0b1075;
+    background-image: none;
+    color: #fff;
+}
