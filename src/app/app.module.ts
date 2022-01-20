@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CssPropertiesComponent } from './css-properties/css-properties.component';
-
+import { PositionComponent } from './position/position.component';
+import { TransformComponent } from './transform/transform.component';
 @NgModule({
   declarations: [
     AppComponent,
-    CssPropertiesComponent
+    PositionComponent,
+    TransformComponent
+  
   ],
   imports: [
     BrowserModule,

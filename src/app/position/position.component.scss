@@ -10,7 +10,6 @@
     //top: 10px;;
     //left right top bottom does not affect the position in static
 }
-
 .relative {
     &:hover {
         position: relative;
@@ -22,7 +21,6 @@
         //relative to its normal position and leave gap at its normal position
     }
 }
-
 .absolute {
     &:hover {
         position: absolute;
@@ -38,18 +36,13 @@
     position: fixed;
     bottom: 2px;
     right: 10px;
-
-    //right : 10px
-    // bottom: 10px;
-    // top: 40px;
-    //left right top bottom works in relative
-    //relative to its parent position and does not leave any gap at its normal position
+    //relative to  browser and even on scrolling it will fixed on position
 }
 .sticky {
     position: sticky;
     top: 3px;
+    //It acts like a relatively positioned element until a certain scroll point and then it acts like a fixed element.
 }
-
 .box {
     text-align: center;
     display: inline-block;

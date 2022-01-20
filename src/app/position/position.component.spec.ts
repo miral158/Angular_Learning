@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CssPropertiesComponent } from './css-properties.component';
+import { PositionComponent } from './position.component';
 
-describe('CssPropertiesComponent', () => {
-  let component: CssPropertiesComponent;
-  let fixture: ComponentFixture<CssPropertiesComponent>;
+describe('PositionComponent', () => {
+  let component: PositionComponent;
+  let fixture: ComponentFixture<PositionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CssPropertiesComponent ]
+      declarations: [ PositionComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CssPropertiesComponent);
+    fixture = TestBed.createComponent(PositionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
