@@ -1,0 +1,60 @@
+.container {
+    border: 2px solid black;
+    height: 1234px;
+}
+.static {
+    position: static;
+    left: 10px;
+    //right : 10px
+    bottom: 10px;
+    //top: 10px;;
+    //left right top bottom does not affect the position in static
+}
+
+.relative {
+    &:hover {
+        position: relative;
+        left: 10px;
+        //right : 10px
+        // bottom: 10px;
+        top: 10px;
+        //left right top bottom works in relative
+        //relative to its normal position and leave gap at its normal position
+    }
+}
+
+.absolute {
+    &:hover {
+        position: absolute;
+        left: 34px;
+        //right : 10px
+        // bottom: 10px;
+        top: 40px;
+        //left right top bottom works in relative
+        //relative to its parent position and does not leave any gap at its normal position
+    }
+}
+.fixed {
+    position: fixed;
+    bottom: 2px;
+    right: 10px;
+
+    //right : 10px
+    // bottom: 10px;
+    // top: 40px;
+    //left right top bottom works in relative
+    //relative to its parent position and does not leave any gap at its normal position
+}
+.sticky {
+    position: sticky;
+    top: 3px;
+}
+
+.box {
+    text-align: center;
+    display: inline-block;
+    border: 2px solid royalblue;
+    width: 150px;
+    height: 150px;
+    margin: 4px;
+}
