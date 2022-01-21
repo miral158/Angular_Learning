@@ -4,11 +4,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PositionComponent } from './position/position.component';
 import { TransformComponent } from './transform/transform.component';
+import { VisibilityComponent } from './visibility/visibility.component';
 @NgModule({
   declarations: [
     AppComponent,
     PositionComponent,
-    TransformComponent
+    TransformComponent,
+    VisibilityComponent
   
   ],
   imports: [
