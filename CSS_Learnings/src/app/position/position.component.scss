@@ -36,11 +36,13 @@
     position: fixed;
     bottom: 2px;
     right: 10px;
+    visibility: hidden;
     //relative to  browser and even on scrolling it will fixed on position
 }
 .sticky {
     position: sticky;
     top: 3px;
+    visibility: hidden;
     //It acts like a relatively positioned element until a certain scroll point and then it acts like a fixed element.
 }
 .box {
@@ -71,3 +73,14 @@
     background-color: blueviolet;
     
     }
+    .whitespace {
+    
+        width: 900px;
+        height: 150px;
+        border: 2px solid black;
+        // white-space:pre
+        // white-space: nowrap;
+        // white-space:pre-line;
+        // white-space: pre-wrap;
+    }
+    
