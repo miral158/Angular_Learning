@@ -1,9 +1,9 @@
 .gallary{
     width:1000px;
-    height: 1000px;
+    height: 700px;
     background-color: ivory;
     border :1px solid;
-    margin:15%;
+    
     
 }
 .container{
@@ -21,8 +21,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    margin: 1%;
         img{
+            
             height: 300px;
             width: 300px;
         }
@@ -34,4 +35,34 @@
     &:hover{
         visibility:hidden; //visibility hidden only hides the element but it does not affect the structure
     }
+}
+
+.display-none{
+    // background-color: bisque;
+        display:none; //visibility hidden only hides the element but it does not affect the structure
+}
+.display-inline{
+    display:inline;
+}
+.display-block{
+    display:inline-block;
+}
+.box{
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+}
+.flex{
+    display: flex; 
+}
+.background{
+    
+    align-items: center;
+    justify-content: center;
+    // background: chartreuse;
+    // background-color: chocolate;
+    background-image: url(https://cdn5.vectorstock.com/i/1000x1000/02/89/seamless-horizontal-border-vector-590289.jpg);    
+    // background-repeat: repeat;       
+
+
 }
