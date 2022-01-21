@@ -1,0 +1,37 @@
+.gallary{
+    width:1000px;
+    height: 1000px;
+    background-color: ivory;
+    border :1px solid;
+    margin:15%;
+    
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.container{
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.images{
+    height: 300px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+        img{
+            height: 300px;
+            width: 300px;
+        }
+        &:hover{
+            opacity: 0.5;  //makes element transperent
+        }
+}
+.visibility-hidden{
+    &:hover{
+        visibility:hidden; //visibility hidden only hides the element but it does not affect the structure
+    }
+}

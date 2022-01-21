@@ -1,0 +1,93 @@
+h2{
+    color:lightcoral;
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Trebuchet MS';
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.box{
+    margin: 2%;
+    height: 200px;
+    width: 200px;
+    background-color:rgb(204, 172, 186);
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Trebuchet MS';
+}
+.box-rotate{
+    &:hover{
+    transform: rotate(-40deg);
+    // transform: rotate(.25turn);
+    }
+}
+.box-zoom-in{
+    &:hover{
+        transform: scale(1.25);
+        // transform-origin: 100% 100%;
+    }
+}
+.box-zoom-X{
+    &:hover{
+        transform: scaleX(1.25);
+    }
+}
+.box-zoom-Y{
+    &:hover{
+        transform: scaleY(1.25);
+    }
+}
+.box-rotate-x{
+    &:hover{
+        transform: rotateX(.13turn);
+    }
+}
+.skew{
+    &:hover{
+        transform: skew(20deg,20deg);
+    }
+}
+.skewX{
+    &:hover{
+        transform: skewX(20deg);
+    }
+}
+.skewY{
+    &:hover{
+        transform: skewY(20deg);
+    }
+}
+.translateX{
+    &:hover{
+    transform: translateX(20px);
+    }
+}
+.translateY{
+    &:hover{
+    transform: translateY(20px);
+    }
+}
+.translate{
+    &:hover{
+    transform: translate(20px,20px);
+    }
+}
+.translate3D{
+    &:hover{
+    transform: translate3d(20px, 20px, 20px);
+    }
+}
+.combine-transform{
+    &:hover{
+    transform: rotate(25deg) scale(1.2);
+    }
+}
+
+
+
