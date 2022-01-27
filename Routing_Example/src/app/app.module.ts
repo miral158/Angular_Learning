@@ -13,7 +13,7 @@ import { WebrexComponent } from './webrex/webrex.component';
 import { TabdetailComponent } from './tabdetail/tabdetail.component';
 import { PortfoliocardsComponent } from './portfoliocards/portfoliocards.component';
 import { JobsFairComponent } from './jobs-fair/jobs-fair.component';
-
+import{SignUpComponent} from '../../../Basic_Learning/src/app/sign-up/sign-up.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +25,7 @@ import { JobsFairComponent } from './jobs-fair/jobs-fair.component';
     TabdetailComponent,
     PortfoliocardsComponent,
     JobsFairComponent,
-    
+    SignUpComponent
     
   ],
   imports: [

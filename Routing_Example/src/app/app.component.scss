@@ -1,3 +1,94 @@
-.h1{
+h1 {
     text-align: center;
+
+}
+h2 {
+    text-align: center;
+}
+.navbar{
+    position: sticky ;
+}
+.nav-item {
+    &:first-child {
+        background-color: rgb(255, 177, 100);
+    }
+    &:last-child {
+        background-color: lightcyan;
+    }
+}
+.nav-item {
+    &:hover {
+        text-decoration: underline solid 2px;
+    }
+    .nav-link {
+        &:link {
+            color: #ff0000f1;
+        }
+        &:visited {
+            color: #5967e2;
+        }
+        &:active {
+            color: rgb(18, 238, 18);
+        }
+    }
+}
+input {
+    &:focus {
+        background-color: rgb(236, 236, 186);
+        outline: none;
+    }
+    &:valid {
+        border: 2px solid #71d300;
+    }
+    &:invalid {
+        background-color: rgb(241, 183, 183);
+    }
+    &:checked {
+        width: 20px;
+        height: 20px;
+    }
+    
+   
+}
+.language {
+    margin: 3%;
+    div {
+        &:lang(en) {
+            background-color: lightgoldenrodyellow;
+        }
+        &:lang(fr) {
+            background-color: lightgray;
+        }
+        &:lang(gr) {
+            background-color: lightsteelblue;
+        }
+    }
+}
+.elements {
+    p {
+        &::first-line {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        &::first-letter {
+            font-weight: bold;
+            font-size: 1.6em;
+        }
+        &::selection {
+            background-color: rgb(38, 160, 236);
+            color: white;
+        }
+        &::after {
+            content: "....";
+        }
+        &::before {
+            content: "Read this -";
+            background-color: yellow;
+            color: red;
+            font-weight: bold;
+        }
+        &::spelling-error{
+            text-decoration: wavy red;
+        }
+    }
 }

@@ -1,39 +1,103 @@
-<app-webrex></app-webrex>
+<!-- <app-webrex></app-webrex>
 
-<app-jobs-fair></app-jobs-fair>
+<app-jobs-fair></app-jobs-fair> -->
 
 <!-- 
 <app-tabdetail></app-tabdetail> -->
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Router Example</title>
 </head>
+
 <body>
     <h1 class="h1 mb-4">Router and Nevigation</h1>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <a class="navbar-brand" routerLink="/">Router Demo</a>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" routerLink="/home" routerLinkActive="active">Home</a>
-              </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/services"routerLinkActive="active">Services</a>
+                    <a class="nav-link active" routerLink="/home" routerLinkActive="active">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/aboutus"routerLinkActive="active">About Us</a>
+                    <a class="nav-link" routerLink="/services" routerLinkActive="active">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/aboutus" routerLinkActive="active">About Us</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/contactus" routerLinkActive="active">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/jobs-fair" routerLinkActive="active"> jobs-fair</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/webrex" routerLinkActive="active"> Webrex</a>
                 </li>
             </ul>
         </div>
     </nav>
 
+    <form [formGroup]="signupForm" (ngSubmit)="userSignUp()">
+        <div style="text-align: center">
+          <h1>Sign In</h1>
+        </div>
+        <div class="form-group" style="margin-right: 200px; margin-left: 200px">
+          <div class="my-1 form-control">Name: <input type="text" formControlName="name" required /></div>
+          <!-- <div *ngIf="user && user.invalid && (user.dirty || user.touched)" class="alert alert-danger">
+            <div *ngIf="user.errors?.['required']; then Required; else Invalid"> </div>
+            <ng-template #Invalid>
+              Please Enter Valid Name
+            </ng-template>
+            <ng-template #Required>
+              Name is Required
+            </ng-template>
+          </div> -->
+        </div>
+        <div class="form-group" style="margin-right: 200px; margin-left: 200px">
+          <div class="my-1 form-control">Email: <input type="email" formControlName="email" required/></div>
+          <span></span>
+          <!-- <div *ngIf="email && email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+            <div *ngIf="email.errors?.['required']; then Required; else Invalid"> </div>
+            <ng-template #Invalid>
+              Please Enter Valid Email
+            </ng-template>
+            <ng-template #Required>
+              Email is Required
+            </ng-template>
+          </div> -->
+        </div>
+        <div class="form-group" style="margin-right: 200px; margin-left: 200px">
+          <div class="my-1 form-control">Age: <input type="text" formControlName="age" required min="1" max="15"/></div>
+          
+          </div>
+
+          <div class="form-group" style="margin-right: 200px; margin-left: 200px">
+            Gender:
+            <input type="radio" value="male" checked formControlName="gender" /> Male
+            <input type="radio" value="female" formControlName="gender" /> Female
+          </div>
+          <div class="form-group" style="margin-right: 200px; margin-left: 200px">
+            <button type="submit" class="btn btn-primary my-1"> submit</button>
+          </div>
+        </form> 
+    <div class="language">
+        <h2>Language Selector Example</h2> 
+        <div lang="en">English Language</div>
+        <div lang="fr">French Language</div>
+        <div lang="gr">German Language</div>
+    </div>
+    <div class="elements">
+        <h2> Pseudo-class and  Pseudo-element</h2>
+        <p  contenteditable spellcheck="true">
+            Pseudo-class is a selector that selects elments that are in a specific state, e.g. they are the first element of their type, or they are being hovered over by the mouse pointer. They tend to act as if you had applied a class to some part of your document, often helping you cut down on excess classes in your markup, and giving you more flexible, maintainable code etc.
+        </p>
+    </div>
     <router-outlet></router-outlet>
 </body>
-</html> -->
+
+</html>
