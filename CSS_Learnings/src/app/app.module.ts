@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { PositionComponent } from './position/position.component';
 import { TransformComponent } from './transform/transform.component';
 import { VisibilityComponent } from './visibility/visibility.component';
+import { WebStructureComponent } from './web-structure/web-structure.component';
 @NgModule({
   declarations: [
     AppComponent,
     PositionComponent,
     TransformComponent,
-    VisibilityComponent
+    VisibilityComponent,
+    WebStructureComponent
   
   ],
   imports: [

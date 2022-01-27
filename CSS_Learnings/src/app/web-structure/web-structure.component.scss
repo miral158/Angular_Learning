@@ -1,0 +1,160 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+div {
+    font-family: monospace;
+    font-weight: bold;
+}
+.web-structure {
+    width: 100%;
+    height: 250rem;
+
+    .header {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        height: 80px;
+        background-color: rgb(212, 226, 231);
+        // border: 1px solid black;
+        .logo {
+            width: 7%;
+            height: 80px;
+            background-image: url("https://cdn.dribbble.com/users/24078/screenshots/15522433/media/e92e58ec9d338a234945ae3d3ffd5be3.jpg?compress=1&resize=400x300");
+            background-size: 100px 80px;
+            // border: 1px solid rebeccapurple;
+            float: left;
+        }
+        .heading {
+            width: 10%;
+            height: 80px;
+            // border: 1px solid black;
+            float: left;
+            line-height: 80px;
+            text-align: center;
+            font-size: 18px;
+        }
+        .menu {
+            width: 83%;
+            height: 80px;
+            // border: 1px solid black;
+            float: right;
+            text-align: right;
+            ul {
+                list-style: none;
+
+                li {
+                    // margin: 2px;
+                    display: inline-block;
+                    height: 80px;
+                    font-size: 20px;
+                    color: black;
+                    text-align: center;
+                    line-height: 80px;
+                    // border: 1px solid black;
+                    padding: 0 20px;
+                }
+            }
+        }
+    }
+    .container {
+        margin-top: 1%;
+        width: 100%;
+        //height: 1500px;
+        border: 1px solid black;
+        display: flex;
+        flex-wrap: wrap;
+        .box {
+            width: 350px;
+            height: 350px;
+            border: 1px solid black;
+            margin: 2px;
+            text-align: center;
+            img {
+                width: 350px;
+                height: 350px;
+                z-index: 0;
+            }
+            .text {
+                position: absolute;
+                // z-index: 1;
+                top: 35%;
+                // left: 20px;
+            }
+            .stack {
+                margin: 1%;
+                width: 340px;
+                //height: 340px;
+                //border: 1px solid rgb(255, 7, 7);
+                display: flex;
+                flex-wrap: wrap;
+                &.center {
+                    &:hover {
+                        align-items: center;
+                    }
+                }
+                &.column {
+                    &:hover {
+                        flex-direction: column;
+                    }
+                }
+                &.reverse-column {
+                    &:hover {
+                        flex-direction: column-reverse;
+                    }
+                }
+                &.reverse-row {
+                    &:hover {
+                        flex-direction: row-reverse;
+                    }
+                }
+                &.justify {
+                    &:hover {
+                        justify-content: space-around; //left right center baseline flex start flex end
+                        //justify-content:space-evenly;space-between
+                    }
+                }
+                &.gap {
+                    &:hover {
+                        gap: 10px 30px;
+                    }
+                }
+                
+                .stack-box {
+                    width: 60px;
+                    height: 70px;
+                    border: 1px solid black;
+                    &.grow {
+                        &:hover {
+                            flex-grow:4;
+                        }
+                    }
+                }
+            }
+        }
+        .hidden {
+            &:hover {
+                visibility: hidden; //visibility hidden only hides the element but it does not affect the structure
+                // z-index: 1;
+            }
+        }
+        .vanish {
+            &:hover {
+                display: none; //visibility hidden only hides the element but it does not affect the structure
+                //  z-index: 1
+            }
+        }
+        .transperent {
+            &:hover {
+                opacity: 0.3; //visibility hidden only hides the element but it does not affect the structure
+                // z-index: 1;
+            }
+        }
+        .zoomin {
+            &:hover {
+                transform: scale(1.25); //visibility hidden only hides the element but it does not affect the structure
+                // z-index: 1;
+            }
+        }
+    }
+}
