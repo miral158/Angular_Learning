@@ -1,12 +1,12 @@
 h1 {
     text-align: center;
-
 }
 h2 {
     text-align: center;
+    border: 2px solid black;
 }
-.navbar{
-    position: sticky ;
+.navbar {
+    position: relative;
 }
 .nav-item {
     &:first-child {
@@ -47,8 +47,6 @@ input {
         width: 20px;
         height: 20px;
     }
-    
-   
 }
 .language {
     margin: 3%;
@@ -87,8 +85,107 @@ input {
             color: red;
             font-weight: bold;
         }
-        &::spelling-error{
+        &::spelling-error {
             text-decoration: wavy red;
+        }
+    }
+}
+.form-group {
+    ul {
+        li {
+            &:nth-child(2) {
+                background-color: #71d300;
+                font-weight: bold;
+            }
+            &:nth-child(odd) {
+                color: brown;
+            }
+            &:nth-child(even) {
+                color: rgb(85, 42, 165);
+            }
+        }
+    }
+    p {
+        &:nth-child(3n + 1) {
+            color: cornflowerblue;
+        }
+    }
+}
+.items {
+    margin-left: 3%;
+    li {
+        &:nth-last-child(2) {
+            background-color: blueviolet;
+        }
+    }
+}
+section {
+    h4 {
+        &:first-of-type {
+            background-color: seagreen;
+        }
+    }
+    p {
+        &:first-of-type {
+            background-color: red;
+        }
+        &:nth-of-type(2) {
+            font-weight: bold;
+        }
+        &:nth-last-of-type(3) {
+            color: saddlebrown;
+        }
+    }
+}
+.nthchild {
+    li {
+        &:nth-child(3n)//odd, even, n
+        {
+            color: skyblue;
+        }
+    }
+}
+.nthlastchild {
+    li {
+        &:nth-last-child(2)//odd, even, n
+        {
+            color: rgb(241, 229, 47);
+        }
+    }
+}
+.firstoftype {
+    p {
+        &:first-of-type{
+            font-size: x-large;
+        }
+    }
+}
+.lastoftype {
+    p {
+        &:last-of-type{
+            color: rgb(19, 0, 128);
+            font-weight: bold;
+        }
+    }
+}
+.nthoftype{
+    p{
+        &:nth-of-type(odd){
+            text-decoration: underline solid blue;
+        }
+    }
+}
+.nthlastoftype{
+    p{
+        &:nth-last-of-type(5){
+            background-color: darkorange;
+        }
+    }
+}
+.nested{
+    div{
+        :first-child{
+            background-color:darkorchid;
         }
     }
 }
