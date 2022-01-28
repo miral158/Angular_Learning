@@ -41,10 +41,10 @@
             transform: translateY(-90px) skew(0, -7deg);
           }
         }
-        .image{
+        .image {
           &::after {
             background: #000000b0;
-        }
+          }
         }
       }
       .image {
@@ -75,10 +75,10 @@
           left: 0;
           transition: all 0.5s ease;
         }
-        &:hover{
+        &:hover {
           &::after {
             background: #000000b0;
-        }
+          }
         }
       }
       .detail {

@@ -4,6 +4,7 @@
 
 <!-- 
 <app-tabdetail></app-tabdetail> -->
+<!-- <app-portfoliocards></app-portfoliocards> -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,38 +39,24 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/webrex" routerLinkActive="active"> Webrex</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/portfoliocard" routerLinkActive="active">Portfoliocard</a>
+        </li>
       </ul>
     </div>
   </nav>
-
   <form [formGroup]="signupForm" (ngSubmit)="userSignUp()">
     <div style="text-align: center">
       <h1>Sign In</h1>
     </div>
     <div class="form-group" style="margin-right: 200px; margin-left: 200px">
       <div class="my-1 form-control">Name: <input type="text" formControlName="name" required /></div>
-      <!-- <div *ngIf="user && user.invalid && (user.dirty || user.touched)" class="alert alert-danger">
-            <div *ngIf="user.errors?.['required']; then Required; else Invalid"> </div>
-            <ng-template #Invalid>
-              Please Enter Valid Name
-            </ng-template>
-            <ng-template #Required>
-              Name is Required
-            </ng-template>
-          </div> -->
+      
     </div>
     <div class="form-group" style="margin-right: 200px; margin-left: 200px">
       <div class="my-1 form-control">Email: <input type="email" formControlName="email" required /></div>
       <span></span>
-      <!-- <div *ngIf="email && email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
-            <div *ngIf="email.errors?.['required']; then Required; else Invalid"> </div>
-            <ng-template #Invalid>
-              Please Enter Valid Email
-            </ng-template>
-            <ng-template #Required>
-              Email is Required
-            </ng-template>
-          </div> -->
+      
     </div>
     <div class="form-group" style="margin-right: 200px; margin-left: 200px">
       <div class="my-1 form-control">Age: <input type="text" formControlName="age" required min="1" max="15" /></div>
@@ -84,42 +71,7 @@
     <div class="form-group" style="margin-right: 200px; margin-left: 200px">
       <button type="submit" class="btn btn-primary my-1"> submit</button>
     </div>
-    <h2>background Color of 2nd child is green even child: blue odd child brown</h2>
-    <!-- <div class="form-group" style="margin-right: 200px; margin-left: 200px">
-      Hobbies:
-      <ul>
-        <li> Painting </li>
-        <li> Cooking </li>
-        <li> Crafting </li>
-        <li> Reading </li>
-        <li> trawelling </li>
-      </ul>
-      <h2>Color of Every 3rd child is blue </h2>
-      <p>The first paragraph.</p>
-      <p>The second paragraph.</p>
-      <p>The third paragraph.</p>
-      <p>The fourth paragraph.</p>
-      <p>The fifth paragraph.</p>
-      <p>The sixth paragraph.</p>
-    </div>
-    <div class="items">
-      
-      <ul>
-        <li>First Item</li>
-        <li>Second Item</li>
-        <li>Third Item</li>
-        <li>Fourth Item</li>
-        <li>Fifth Item</li>
-      </ul>
-    </div>
-    <section>
-      <h4>nth-of type</h4>
-      <h4>nth-of type</h4>
-      <p>Item 1</p>
-      <p>Item 2</p>
-      <p>Item 3</p>
-    </section> -->
-
+    
   </form>
   <div class="language">
     <h2>Language Selector Example</h2>
@@ -258,8 +210,6 @@
       <p>Paragraph:3</p>
     </div>
   </div>
-
   <router-outlet></router-outlet>
 </body>
-
 </html>

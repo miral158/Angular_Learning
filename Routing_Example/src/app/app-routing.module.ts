@@ -6,6 +6,7 @@ import { ServicesComponent } from './services/services.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { JobsFairComponent } from './jobs-fair/jobs-fair.component';
 import { WebrexComponent } from './webrex/webrex.component';
+import { PortfoliocardsComponent } from './portfoliocards/portfoliocards.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,10 @@ const routes: Routes = [
     path:'webrex',
     component:WebrexComponent
   },
+  {
+    path:'portfoliocard',
+    component:PortfoliocardsComponent
+  }
 ];
 
 @NgModule({
