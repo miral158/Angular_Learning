@@ -9,8 +9,19 @@
 <body>
   <div>
     <h1 [ngClass]="['title','background']">{{title}}</h1>
-    
   </div>
+  <div>
+    <h2>ngIf Example</h2>
+    <h4 *ngIf="person.age>18">you are eligible to vote</h4>
+  </div>
+  <div>
+    <h2>ngFor Example</h2>
+    <h3>Personas Details</h3>
+    <h4 *ngFor="let data of person | keyvalue"> 
+     <li>{{data.key}} : {{data.value}}</li> 
+    </h4>
+  </div>
+  <app-registration></app-registration>
   
 </body>
 </html>

@@ -7,7 +7,6 @@ import { FormControl, Validators, FormGroup } from '@angular/forms'
 })
 export class AppComponent {
   title = 'Routing_Example';
-
   constructor() {
 
   }

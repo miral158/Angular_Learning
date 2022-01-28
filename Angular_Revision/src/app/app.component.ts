@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular_Revision';
+  person = {
+    'name':'miral',
+    'age':25
+  }
 }
