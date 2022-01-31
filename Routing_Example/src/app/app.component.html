@@ -13,6 +13,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Router Example</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -51,12 +54,12 @@
     </div>
     <div class="form-group" style="margin-right: 200px; margin-left: 200px">
       <div class="my-1 form-control">Name: <input type="text" formControlName="name" required /></div>
-      
+
     </div>
     <div class="form-group" style="margin-right: 200px; margin-left: 200px">
       <div class="my-1 form-control">Email: <input type="email" formControlName="email" required /></div>
       <span></span>
-      
+
     </div>
     <div class="form-group" style="margin-right: 200px; margin-left: 200px">
       <div class="my-1 form-control">Age: <input type="text" formControlName="age" required min="1" max="15" /></div>
@@ -71,7 +74,7 @@
     <div class="form-group" style="margin-right: 200px; margin-left: 200px">
       <button type="submit" class="btn btn-primary my-1"> submit</button>
     </div>
-    
+
   </form>
   <div class="language">
     <h2>Language Selector Example</h2>
@@ -210,11 +213,44 @@
       <p>Paragraph:3</p>
     </div>
   </div>
+  <p>Paragraph</p>
+  <div>div</div>
+  <span>Span</span>
+  <div>div</div>
+
+
+  <h1>CSS Selectors</h1>
+  <h3> with ID</h3>
+  <p id="para1">Me too!</p>
+  <p>And me!</p>
+  <h3> > Child Selector</h3>
+
+  <div class="childselector">
+    <span> Span tag
+      <p> inner span paragraph</p>
+    </span>
+  </div>
+
+  <h3> + sibling Selector</h3>
+  <div class="siblingselector">
+    <p>inner div paragraph</p>
+  </div>
+  <p>After Div Paragraph</p>
+  <p>Second para</p>
+
+  <h3> ~ General Selector</h3>
+  <div class="generalselector">
+    <p>The general sibling selector (~) selects all elements that are next siblings of a specified element.</p>
+    <p>Paragraph 1.</p>
+    <div>
+      <p>Paragraph 2.</p>
+    </div>
+  </div>
+  <p>Paragraph 3.</p>
+  <code>Some code.</code>
+  <p>Paragraph 4.</p>
+
   <router-outlet></router-outlet>
 </body>
-</html>
 
-<p></p>
-<div></div>
-<span></span>
-<div></div>
+</html>

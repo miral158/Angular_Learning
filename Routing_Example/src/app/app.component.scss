@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@font-face{
+    font-family: "myfont";
+    src: url(/font/MeaCulpa-Regular.ttf)
+}
 h1 {
     text-align: center;
 }
@@ -155,37 +160,82 @@ section {
 }
 .firstoftype {
     p {
-        &:first-of-type{
+        &:first-of-type {
             font-size: x-large;
         }
     }
 }
 .lastoftype {
     p {
-        &:last-of-type{
+        &:last-of-type {
             color: rgb(19, 0, 128);
             font-weight: bold;
         }
     }
 }
-.nthoftype{
-    p{
-        &:nth-of-type(odd){
+.nthoftype {
+    p {
+        &:nth-of-type(odd) {
             text-decoration: underline solid blue;
         }
     }
 }
-.nthlastoftype{
-    p{
-        &:nth-last-of-type(5){
+.nthlastoftype {
+    p {
+        &:nth-last-of-type(5) {
             background-color: darkorange;
         }
     }
 }
-.nested{
-    div{
-        :first-child{
-            background-color:darkorchid;
+.nested {
+    div {
+        :first-child {
+            background-color: darkorchid;
         }
+    }
+}
+
+// div{
+//     &:first-of-type{
+//         background-color: red;
+//     }
+// }
+#para1 {
+    color: red;
+}
+* {
+    font-family: monospace;
+    
+}
+
+h3 {
+    background-color: thistle;
+    color: brown;
+    font-family: 'Staatliches', cursive;
+    
+}
+
+h1 {
+    background-color: thistle;
+    color: brown;
+    font-family: 'Dancing Script', cursive;
+}
+
+.childselector {
+    & > span {
+        background-color: cornflowerblue;
+    }
+}
+.siblingselector {
+    & + p {
+        font-weight: bold;
+        color: darkblue;
+    }
+}
+
+.generalselector {
+    & ~ p {
+        background-color: yellow;
+        font-family: "myfont";
     }
 }
