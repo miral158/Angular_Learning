@@ -13,8 +13,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Router Example</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 </head>
 
@@ -249,8 +249,60 @@
   <p>Paragraph 3.</p>
   <code>Some code.</code>
   <p>Paragraph 4.</p>
+<h1>Attribute Selector</h1>
 
-  <router-outlet></router-outlet>
+<h3>[type] </h3>
+<div class="attribute">
+  Name:<input type="text">
+  Email:<input type="text">
+  Age: <input type="number">
+</div>
+<h3>[type] = 'text' </h3>
+<div class="attributeval">
+  Name:<input type="text">
+  Email:<input type="text">
+  Age: <input type="number">
+</div>
+
+<h3>[class^ = val] </h3>
+<div class="attributewithtick">
+  <p class="para1">Paragraph 1.</p>
+  <p class="para2">Paragraph 2.</p>
+  <p class="para-3">Paragraph 3.</p>
+  <p class="para-4">Paragraph 4.</p>
+  <p class="para-5">Paragraph 5.</p>
+</div>
+<h3>[class| = val] </h3>
+<div class="attributewithpipe">
+  <p class="para1">Paragraph 1.</p>
+  <p class="para2">Paragraph 2.</p>
+  <p class="para-3">Paragraph 3.</p>
+  <p class="para-4">Paragraph 4.</p>
+  <p class="para-5">Paragraph 5.</p>
+</div>
+<h3>[class$ = val] </h3>
+<div class="attributewithdoller">
+  <a href="https://png.pngtree.com/element_our/20190531/ourmid/pngtree-color-glare-computer-free-map-image_1276302.jpg">Click to open</a>
+</div>
+<h3>[class*= val] </h3>
+<div class="attributewithall">
+  <p class="para1">Paragraph 1.</p>
+  <p class="para2">Paragraph 2.</p>
+  <p class="para-3">Paragraph 3.</p>
+  <p class="para-4">Paragraph 4.</p>
+  <p class="para-5">Paragraph 5.</p>
+</div>
+<h3>CSS [attribute~="value"] Selector</h3>
+<div class="attributewithtield">
+  <img src="https://www.w3schools.com/css/img_tree.gif"  title="tree" width="200" height="358">
+  <img src="https://www.w3schools.com/css/img_flwr.gif" title="garden flower" width="224" height="162">
+  <img src="https://www.w3schools.com/css/klematis.jpg"title="klematis flower" width="150" height="113">  
+</div>
+<div class="testfont">
+  This is test font div
+</div>
+
+<router-outlet></router-outlet>
 </body>
 
 </html>
