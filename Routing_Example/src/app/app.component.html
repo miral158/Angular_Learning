@@ -5,250 +5,237 @@
 <!-- 
 <app-tabdetail></app-tabdetail> -->
 <!-- <app-portfoliocards></app-portfoliocards> -->
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Router Example</title>
-  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-</head>
-
-<body>
-  <h1 class="h1 mb-4">Router and Nevigation</h1>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="navbar-collapse">
-      <a class="navbar-brand" routerLink="/">Router Demo</a>
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" routerLink="/home" routerLinkActive="active">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/services" routerLinkActive="active">Services</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/aboutus" routerLinkActive="active">About Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/contactus" routerLinkActive="active">Contact Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/jobs-fair" routerLinkActive="active"> jobs-fair</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/webrex" routerLinkActive="active"> Webrex</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/portfoliocard" routerLinkActive="active">Portfoliocard</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <form [formGroup]="signupForm" (ngSubmit)="userSignUp()">
-    <div style="text-align: center">
-      <h1>Sign In</h1>
-    </div>
-    <div class="form-group" style="margin-right: 200px; margin-left: 200px">
-      <div class="my-1 form-control">Name: <input type="text" formControlName="name" required /></div>
-
-    </div>
-    <div class="form-group" style="margin-right: 200px; margin-left: 200px">
-      <div class="my-1 form-control">Email: <input type="email" formControlName="email" required /></div>
-      <span></span>
-
-    </div>
-    <div class="form-group" style="margin-right: 200px; margin-left: 200px">
-      <div class="my-1 form-control">Age: <input type="text" formControlName="age" required min="1" max="15" /></div>
-
-    </div>
-
-    <div class="form-group" style="margin-right: 200px; margin-left: 200px">
-      Gender:
-      <input type="radio" value="male" checked formControlName="gender" /> Male
-      <input type="radio" value="female" formControlName="gender" /> Female
-    </div>
-    <div class="form-group" style="margin-right: 200px; margin-left: 200px">
-      <button type="submit" class="btn btn-primary my-1"> submit</button>
-    </div>
-
-  </form>
-  <div class="language">
-    <h2>Language Selector Example</h2>
-    <div lang="en">English Language</div>
-    <div lang="fr">French Language</div>
-    <div lang="gr">German Language</div>
-  </div>
-  <div class="elements">
-    <h2> Pseudo-class and Pseudo-element</h2>
-    <p contenteditable spellcheck="true">
-      Pseudo-class is a selector that selects elments that are in a specific state, e.g. they are the first element of
-      their type, or they are being hovered over by the mouse pointer. They tend to act as if you had applied a class to
-      some part of your document, often helping you cut down on excess classes in your markup, and giving you more
-      flexible, maintainable code etc.
-    </p>
-  </div>
-  <div class="nthchild">
-    <h4>:nth child Examples</h4>
-    <ul>
-      <li>Item1</li>
-      <li>Item2</li>
-      <li>Item3</li>
-      <li>Item4</li>
-      <li>Item5</li>
-      <li>Item6</li>
+<h1 class="h1 mb-4">Router and Nevigation</h1>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="navbar-collapse">
+    <a class="navbar-brand" routerLink="/">Router Demo</a>
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a class="nav-link active" routerLink="/home" routerLinkActive="active">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/services" routerLinkActive="active">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/aboutus" routerLinkActive="active">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/contactus" routerLinkActive="active">Contact Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/jobs-fair" routerLinkActive="active"> jobs-fair</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/webrex" routerLinkActive="active"> Webrex</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/portfoliocard" routerLinkActive="active">Portfoliocard</a>
+      </li>
     </ul>
   </div>
-  <div class="nthlastchild">
-    <h4>:nth last child Examples</h4>
-    <ul>
-      <li>Item1</li>
-      <li>Item2</li>
-      <li>Item3</li>
-      <li>Item4</li>
-      <li>Item5</li>
-      <li>Item6</li>
-    </ul>
+</nav>
+<form [formGroup]="signupForm" (ngSubmit)="userSignUp()">
+  <div style="text-align: center">
+    <h1>Sign In</h1>
   </div>
-  <div class="firstoftype">
-    <h4>:first of type example</h4>
-    <p>
-      The :nth-last-child(n) selector matches every element that is the nth child, regardless of type, of its parent,
-      counting from the last child.
-    </p>
-    <p>
-      The :nth-last-child(n) selector matches every element that is the nth child, regardless of type, of its parent,
-      counting from the last child.
-    </p>
-    <p>
-      The :nth-last-child(n) selector matches every element that is the nth child, regardless of type, of its parent,
-      counting from the last child.
-    </p>
-  </div>
-  <div class="lastoftype">
-    <h4>:last of type example</h4>
-    <p>
-      The :nth-last-child(n) selector matches every element that is the nth child, regardless of type, of its parent,
-      counting from the last child.
-    </p>
-    <p>
-      The :nth-last-child(n) selector matches every element that is the nth child, regardless of type, of its parent,
-      counting from the last child.
-    </p>
-    <p>
-      The :nth-last-child(n) selector matches every element that is the nth child, regardless of type, of its parent,
-      counting from the last child.
-    </p>
-  </div>
-  <div class="nthoftype">
-    <h4>:nth of type example</h4>
-    <p>
-      The :nth-last-child(n) selector matches every element that is the nth child, regardless of type, of its parent,
-      counting from the last child.
-    </p>
-    <p>
-      The :nth-last-child(n) selector matches every element that is the nth child, regardless of type, of its parent,
-      counting from the last child.
-    </p>
-    <p>
-      The :nth-last-child(n) selector matches every element that is the nth child, regardless of type, of its parent,
-      counting from the last child.
-    </p>
-    <p>
-      The :nth-last-child(n) selector matches every element that is the nth child, regardless of type, of its parent,
-      counting from the last child.
-    </p>
-    <p>
-      The :nth-last-child(n) selector matches every element that is the nth child, regardless of type, of its parent,
-      counting from the last child.
-    </p>
-    <p>
-      The :nth-last-child(n) selector matches every element that is the nth child, regardless of type, of its parent,
-      counting from the last child.
-    </p>
-  </div>
-  <div class="nthlastoftype">
-    <h4>:nth last of type example</h4>
-    <p>
-      The :nth-last-child(n) selector matches every element that is the nth child, regardless of type, of its parent,
-      counting from the last child.
-    </p>
-    <p>
-      The :nth-last-child(n) selector matches every element that is the nth child, regardless of type, of its parent,
-      counting from the last child.
-    </p>
-    <p>
-      The :nth-last-child(n) selector matches every element that is the nth child, regardless of type, of its parent,
-      counting from the last child.
-    </p>
-    <p>
-      The :nth-last-child(n) selector matches every element that is the nth child, regardless of type, of its parent,
-      counting from the last child.
-    </p>
-    <p>
-      The :nth-last-child(n) selector matches every element that is the nth child, regardless of type, of its parent,
-      counting from the last child.
-    </p>
-    <p>
-      The :nth-last-child(n) selector matches every element that is the nth child, regardless of type, of its parent,
-      counting from the last child.
-    </p>
-  </div>
-  <h4>Nested div Example</h4>
-  <div class="nested">
-    <div>
-      <li>Item1</li>
-      <li>Item2</li>
-      <li>Item3</li>
-      <li>Item4</li>
-      <li>Item5</li>
-      <li>Item6</li>
-    </div>
-    <div>
-      <p>Paragraph:1</p>
-      <p>Paragraph:2</p>
-      <p>Paragraph:3</p>
-    </div>
-  </div>
-  <p>Paragraph</p>
-  <div>div</div>
-  <span>Span</span>
-  <div>div</div>
+  <div class="form-group" style="margin-right: 200px; margin-left: 200px">
+    <div class="my-1 form-control">Name: <input type="text" formControlName="name" required /></div>
 
+  </div>
+  <div class="form-group" style="margin-right: 200px; margin-left: 200px">
+    <div class="my-1 form-control">Email: <input type="email" formControlName="email" required /></div>
+    <span></span>
 
-  <h1>CSS Selectors</h1>
-  <h3> with ID</h3>
-  <p id="para1">Me too!</p>
-  <p>And me!</p>
-  <h3> > Child Selector</h3>
+  </div>
+  <div class="form-group" style="margin-right: 200px; margin-left: 200px">
+    <div class="my-1 form-control">Age: <input type="text" formControlName="age" required min="1" max="15" /></div>
 
-  <div class="childselector">
-    <span> Span tag
-      <p> inner span paragraph</p>
-    </span>
   </div>
 
-  <h3> + sibling Selector</h3>
-  <div class="siblingselector">
-    <p>inner div paragraph</p>
+  <div class="form-group" style="margin-right: 200px; margin-left: 200px">
+    Gender:
+    <input type="radio" value="male" checked formControlName="gender" /> Male
+    <input type="radio" value="female" formControlName="gender" /> Female
   </div>
-  <p>After Div Paragraph</p>
-  <p>Second para</p>
+  <div class="form-group" style="margin-right: 200px; margin-left: 200px">
+    <button type="submit" class="btn btn-primary my-1"> submit</button>
+  </div>
 
-  <h3> ~ General Selector</h3>
-  <div class="generalselector">
-    <p>The general sibling selector (~) selects all elements that are next siblings of a specified element.</p>
-    <p>Paragraph 1.</p>
-    <div>
-      <p>Paragraph 2.</p>
-    </div>
+</form>
+<div class="language">
+  <h2>Language Selector Example</h2>
+  <div lang="en">English Language</div>
+  <div lang="fr">French Language</div>
+  <div lang="gr">German Language</div>
+</div>
+<div class="elements">
+  <h2> Pseudo-class and Pseudo-element</h2>
+  <p contenteditable spellcheck="true">
+    Pseudo-class is a selector that selects elments that are in a specific state, e.g. they are the first element of
+    their type, or they are being hovered over by the mouse pointer. They tend to act as if you had applied a class to
+    some part of your document, often helping you cut down on excess classes in your markup, and giving you more
+    flexible, maintainable code etc.
+  </p>
+</div>
+<div class="nthchild">
+  <h4>:nth child Examples</h4>
+  <ul>
+    <li>Item1</li>
+    <li>Item2</li>
+    <li>Item3</li>
+    <li>Item4</li>
+    <li>Item5</li>
+    <li>Item6</li>
+  </ul>
+</div>
+<div class="nthlastchild">
+  <h4>:nth last child Examples</h4>
+  <ul>
+    <li>Item1</li>
+    <li>Item2</li>
+    <li>Item3</li>
+    <li>Item4</li>
+    <li>Item5</li>
+    <li>Item6</li>
+  </ul>
+</div>
+<div class="firstoftype">
+  <h4>:first of type example</h4>
+  <p>
+    The :nth-last-child(n) selector matches every element that is the nth child, regardless of type, of its parent,
+    counting from the last child.
+  </p>
+  <p>
+    The :nth-last-child(n) selector matches every element that is the nth child, regardless of type, of its parent,
+    counting from the last child.
+  </p>
+  <p>
+    The :nth-last-child(n) selector matches every element that is the nth child, regardless of type, of its parent,
+    counting from the last child.
+  </p>
+</div>
+<div class="lastoftype">
+  <h4>:last of type example</h4>
+  <p>
+    The :nth-last-child(n) selector matches every element that is the nth child, regardless of type, of its parent,
+    counting from the last child.
+  </p>
+  <p>
+    The :nth-last-child(n) selector matches every element that is the nth child, regardless of type, of its parent,
+    counting from the last child.
+  </p>
+  <p>
+    The :nth-last-child(n) selector matches every element that is the nth child, regardless of type, of its parent,
+    counting from the last child.
+  </p>
+</div>
+<div class="nthoftype">
+  <h4>:nth of type example</h4>
+  <p>
+    The :nth-last-child(n) selector matches every element that is the nth child, regardless of type, of its parent,
+    counting from the last child.
+  </p>
+  <p>
+    The :nth-last-child(n) selector matches every element that is the nth child, regardless of type, of its parent,
+    counting from the last child.
+  </p>
+  <p>
+    The :nth-last-child(n) selector matches every element that is the nth child, regardless of type, of its parent,
+    counting from the last child.
+  </p>
+  <p>
+    The :nth-last-child(n) selector matches every element that is the nth child, regardless of type, of its parent,
+    counting from the last child.
+  </p>
+  <p>
+    The :nth-last-child(n) selector matches every element that is the nth child, regardless of type, of its parent,
+    counting from the last child.
+  </p>
+  <p>
+    The :nth-last-child(n) selector matches every element that is the nth child, regardless of type, of its parent,
+    counting from the last child.
+  </p>
+</div>
+<div class="nthlastoftype">
+  <h4>:nth last of type example</h4>
+  <p>
+    The :nth-last-child(n) selector matches every element that is the nth child, regardless of type, of its parent,
+    counting from the last child.
+  </p>
+  <p>
+    The :nth-last-child(n) selector matches every element that is the nth child, regardless of type, of its parent,
+    counting from the last child.
+  </p>
+  <p>
+    The :nth-last-child(n) selector matches every element that is the nth child, regardless of type, of its parent,
+    counting from the last child.
+  </p>
+  <p>
+    The :nth-last-child(n) selector matches every element that is the nth child, regardless of type, of its parent,
+    counting from the last child.
+  </p>
+  <p>
+    The :nth-last-child(n) selector matches every element that is the nth child, regardless of type, of its parent,
+    counting from the last child.
+  </p>
+  <p>
+    The :nth-last-child(n) selector matches every element that is the nth child, regardless of type, of its parent,
+    counting from the last child.
+  </p>
+</div>
+<h4>Nested div Example</h4>
+<div class="nested">
+  <div>
+    <li>Item1</li>
+    <li>Item2</li>
+    <li>Item3</li>
+    <li>Item4</li>
+    <li>Item5</li>
+    <li>Item6</li>
   </div>
-  <p>Paragraph 3.</p>
-  <code>Some code.</code>
-  <p>Paragraph 4.</p>
+  <div>
+    <p>Paragraph:1</p>
+    <p>Paragraph:2</p>
+    <p>Paragraph:3</p>
+  </div>
+</div>
+<p>Paragraph</p>
+<div>div</div>
+<span>Span</span>
+<div>div</div>
+
+
+<h1>CSS Selectors</h1>
+<h3> with ID</h3>
+<p id="para1">Me too!</p>
+<p>And me!</p>
+<h3> > Child Selector</h3>
+
+<div class="childselector">
+  <span> Span tag
+    <p> inner span paragraph</p>
+  </span>
+</div>
+
+<h3> + sibling Selector</h3>
+<div class="siblingselector">
+  <p>inner div paragraph</p>
+</div>
+<p>After Div Paragraph</p>
+<p>Second para</p>
+
+<h3> ~ General Selector</h3>
+<div class="generalselector">
+  <p>The general sibling selector (~) selects all elements that are next siblings of a specified element.</p>
+  <p>Paragraph 1.</p>
+  <div>
+    <p>Paragraph 2.</p>
+  </div>
+</div>
+<p>Paragraph 3.</p>
+<code>Some code.</code>
+<p>Paragraph 4.</p>
 <h1>Attribute Selector</h1>
 
 <h3>[type] </h3>
@@ -282,7 +269,8 @@
 </div>
 <h3>[class$ = val] </h3>
 <div class="attributewithdoller">
-  <a href="https://png.pngtree.com/element_our/20190531/ourmid/pngtree-color-glare-computer-free-map-image_1276302.jpg">Click to open</a>
+  <a href="https://png.pngtree.com/element_our/20190531/ourmid/pngtree-color-glare-computer-free-map-image_1276302.jpg">Click
+    to open</a>
 </div>
 <h3>[class*= val] </h3>
 <div class="attributewithall">
@@ -294,15 +282,16 @@
 </div>
 <h3>CSS [attribute~="value"] Selector</h3>
 <div class="attributewithtield">
-  <img src="https://www.w3schools.com/css/img_tree.gif"  title="tree" width="200" height="358">
+  <img src="https://www.w3schools.com/css/img_tree.gif" title="tree" width="200" height="358">
   <img src="https://www.w3schools.com/css/img_flwr.gif" title="garden flower" width="224" height="162">
-  <img src="https://www.w3schools.com/css/klematis.jpg"title="klematis flower" width="150" height="113">  
+  <img src="https://www.w3schools.com/css/klematis.jpg" title="klematis flower" width="150" height="113">
 </div>
 <div class="testfont">
   This is test font div
 </div>
+<h3>Animation Example </h3>
 
+<div class="container">
+  <div class="box"></div>
+</div>
 <router-outlet></router-outlet>
-</body>
-
-</html>

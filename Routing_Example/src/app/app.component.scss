@@ -277,3 +277,31 @@ h1 {
 .testfont {
     font-family: "Mea Culpa";
 }
+$brand-color: #4947b9;
+.container {
+    width: 100%;
+    height: 250px;
+    //border: 2px solid black;
+    margin: 0%;
+    .box {
+        width: 200px;
+        height: 200px;
+        border: 2px solid black;
+       // display: flex;
+        margin: 1%;
+        animation: slide;
+        animation-duration: 1.5s;
+        animation-iteration-count: 10;
+        animation-timing-function: ease-in-out;
+        //animation-direction: reverse;
+    }
+}
+@keyframes slide {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(200%);
+        background-color: $brand-color;
+    }
+}
