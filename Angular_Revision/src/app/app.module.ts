@@ -5,16 +5,20 @@ import { AppComponent } from './app.component';
 import { RegistrationComponent } from './registration/registration.component';
 import{ReactiveFormsModule} from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { HttpClientModule } from '@angular/common/http';
+import { NestedFormComponent } from './nested-form/nested-form.component';
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationComponent,
-    LoginComponent
+    LoginComponent,
+    NestedFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

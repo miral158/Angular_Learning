@@ -1,1 +1,22 @@
-<h1>login works!<h1>
+<b>Data From service file</b>
+<h4 *ngFor="let data of userdata">
+    {{data.contactId}}
+    {{data.contactName}}
+    {{data.number}}
+</h4>
+<hr>
+<b>Data from Json file</b>
+<p *ngFor="let data1 of udata">
+    Country Name: {{data1.name}} Country Code: {{data1.code}}
+</p>
+<b>Data from end point url of Json file</b>
+<p *ngFor="let data of user_data">
+    {{data.id}}
+    {{data.title}}
+    {{data.author}}
+</p>
+<b>With Observable:</b>
+<p *ngFor="let country of u_data$">
+    <!-- Country Name: {{country.name}} Country Code: {{country.code}} -->
+    {{country|json}}
+</p>

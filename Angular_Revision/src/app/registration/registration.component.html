@@ -1,85 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <form [formGroup]="registration" (ngSubmit)="onSubmit()" class="formgroup">
-        <div class="container">
-            <div class="heading">
-                <h1> Registration Form</h1>
-            </div>
-            <div class="formcontrol">
-                <label>FirstName: </label> <input type="text" formControlName = "firstName">
-                <span *ngIf="fname && fname.invalid && (fname.dirty || fname.touched)" class="alert-danger">
-                    <span *ngIf="fname.errors?.['required']; then Required ; else Invalid"></span>
-                    <ng-template #Required>
-                        Reuired field
-                    </ng-template>
-                    <ng-template #Invalid>
-                        Invalid value 
-                    </ng-template>
-                </span>
-
-            </div>
-            <div class="formcontrol">
-                <label>Last Name: </label> <input type="text" formControlName = "lastName">
-                <span *ngIf="lname && lname.invalid && (lname.dirty || lname.touched)" class="alert-danger">
-                    <span *ngIf="lname.errors?.['required']; then Required ; else Invalid"></span>
-                    <ng-template #Required>
-                        Reuired field
-                    </ng-template>
-                    <ng-template #Invalid>
-                        Invalid value 
-                    </ng-template>
-                </span>
-            </div>
-            <div class="formcontrol">
-                <label>Email: </label> <input type="email" formControlName = "email">
-                <span *ngIf="email && email.invalid && (email.dirty || email.touched)" class="alert-danger">
-                    <span *ngIf="email.errors?.['required']; then Required ; else Invalid"></span>
-                    <ng-template #Required>
-                        Reuired field
-                    </ng-template>
-                    <ng-template #Invalid>
-                        Invalid value 
-                    </ng-template>
-                </span>
-            </div>
-            <div class="formcontrol">
-                <label>Gender: </label> 
-                <input type="radio" value="Male" formControlName = "gender">Male
-                <input type="radio" value="Female"formControlName = "gender">Female
-            </div>
-           
-            <div formArrayName = "hobbies">
-                <div class="formcontrol">
-                    <button type="button" (click)="addHobby()" class="hobbies">Add Hobby</button>
-                </div>
-                <div class="formcontrol" *ngFor="let hobby of hobbyControl; let i = index" >
-                    <input type="text" placeholder="Your Hobby" [formControlName] = "i"> 
-                </div>
-            </div>
-            <!-- <div formArrayName = "description">
-                <div class="formcontrol" *ngFor="let decribe of descriptionControl; let d = index" >
-                    <input type="text" placeholder="decribe in few words" [formControlName] = "d"> 
-                </div>
-            </div> -->
-            <div class="formcontrol">
-                <input [disabled]="registration.invalid" class="btn" type="submit">
-            </div>
-            <div class="display">
-                Already Registered?
-                <a routerLink="/login" routerLinkActive="active">Login</a>
-            </div>
-                
-            <hr>
-            <div class="display">{{registration.value | json}}</div>
+<form [formGroup]="registration" (ngSubmit)="onSubmit()" class="formgroup">
+    <div class="container">
+        <div class="heading">
+            <h1> Registration Form</h1>
         </div>
-    </form>
-    <router-outlet></router-outlet>
-</body>
-</html>
+        <div class="formcontrol">
+            <label>FirstName: </label> <input type="text" formControlName="firstName">
+            <span *ngIf="fname && fname.invalid && (fname.dirty || fname.touched)" class="alert-danger">
+                <span *ngIf="fname.errors?.['required']; then Required ; else Invalid"></span>
+                <ng-template #Required>
+                    Reuired field
+                </ng-template>
+                <ng-template #Invalid>
+                    Invalid value
+                </ng-template>
+            </span>
+
+        </div>
+        <div class="formcontrol">
+            <label>Last Name: </label> <input type="text" formControlName="lastName">
+            <span *ngIf="lname && lname.invalid && (lname.dirty || lname.touched)" class="alert-danger">
+                <span *ngIf="lname.errors?.['required']; then Required ; else Invalid"></span>
+                <ng-template #Required>
+                    Reuired field
+                </ng-template>
+                <ng-template #Invalid>
+                    Invalid value
+                </ng-template>
+            </span>
+        </div>
+        <div class="formcontrol">
+            <label>Email: </label> <input type="email" formControlName="email">
+            <span *ngIf="email && email.invalid && (email.dirty || email.touched)" class="alert-danger">
+                <span *ngIf="email.errors?.['required']; then Required ; else Invalid"></span>
+                <ng-template #Required>
+                    Reuired field
+                </ng-template>
+                <ng-template #Invalid>
+                    Invalid value
+                </ng-template>
+            </span>
+        </div>
+        <div class="formcontrol">
+            <label>Gender: </label>
+            <input type="radio" value="Male" formControlName="gender">Male
+            <input type="radio" value="Female" formControlName="gender">Female
+        </div>
+
+        <div formArrayName="hobbies">
+            <div class="formcontrol">
+                <button type="button" (click)="addHobby()" class="hobbies">Add Hobby</button>
+            </div>
+            <div class="formcontrol" *ngFor="let hobby of hobbyControl; let i = index">
+                <input type="text" placeholder="Your Hobby" [formControlName]="i">
+            </div>
+        </div>
+        <div>
+
+        </div>
+        <div class="formcontrol">
+            <input [disabled]="registration.invalid" class="btn" type="submit">
+        </div>
+        <div class="display">
+            Already Registered?
+            <a routerLink="/login" routerLinkActive="active">Login</a>
+        </div>
+        
+
+        <hr>
+        <div class="display">{{registration.value | json}}</div>
+    </div>
+
+</form>
+<router-outlet></router-outlet>
